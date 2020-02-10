@@ -1,8 +1,11 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import PropTypes from "prop-types";
 
-const Layout: React.FC<{}> = ({ children }) => {
+interface Props {
+  children?: React.ReactNode;
+}
+
+const Layout: React.FC<Props> = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -22,10 +25,6 @@ const Layout: React.FC<{}> = ({ children }) => {
       </div>
     </>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node,
 };
 
 export default Layout;
