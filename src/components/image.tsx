@@ -13,7 +13,7 @@ interface Data {
 const Image: React.FC<{}> = () => {
   const data: Data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      placeholderImage: file(relativePath: { eq: "images/gatsby-astronaut.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
